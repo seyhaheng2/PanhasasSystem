@@ -1,0 +1,42 @@
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-area">
+
+     <div class="streaming-table">
+
+      <span style="display: none;" id="found" class="label label-info"></span>
+      <div class="heading">
+        <strong>Listing</strong> marital_statuses
+        <input name="search" id="st_search" class="st_search" placeholder="Search Here" type="text">
+      </div>
+      <div class="table-responsive">
+        <table id="stream_table" class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+                            <th>Name</th>
+                            <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <%= content_tag_for(:tr, @marital_statuses) do |marital_status| %>
+                        <td><%= marital_status.name %></td>
+                        <td><%= link_to '<i class="fa fa-book"></i>'.html_safe, marital_status, class: "btn btn-sm btn-default" %>
+            <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_marital_status_path(marital_status), class: "btn btn-sm btn-primary" %>
+            <%= link_to '<i class="fa fa-remove (alias)"></i>'.html_safe, marital_status, class: "btn btn-sm btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>  
+    <div class="">
+     <%= link_to new_marital_status_path, :class => 'btn btn-primary' do %>
+        <span class="fa fa-plus"></span>
+        New 
+        <% end %>
+    </div>
+  </div></div>
+</div>

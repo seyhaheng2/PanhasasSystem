@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  high_school: MyText
+  english_program: MyText
+  degree_program: MyText
+  university: MyText
+  graduate_school: MyText
+  type_of_degree_id: 
+  desired_major: MyString
+  student_id: 
+
+two:
+  high_school: MyText
+  english_program: MyText
+  degree_program: MyText
+  university: MyText
+  graduate_school: MyText
+  type_of_degree_id: 
+  desired_major: MyString
+  student_id: 

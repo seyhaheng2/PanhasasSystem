@@ -1,0 +1,31 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-area">
+      <div class="wizard-form-h">
+        <div id="wizard" class="swMain">
+
+
+          <%= link_to genders_path, :class => 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-list-alt"></span>
+          Back
+          <% end %>
+          <%= link_to edit_gender_path(@gender), :class => 'btn btn-primary' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+          <% end %>
+            <div class="heading">
+        <strong>show</strong> gender
+          gender
+
+        <dl class="dl-horizontal">
+          <dt>Name:</dt>
+          <dd><%= @gender.name %></dd>
+
+        </dl>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

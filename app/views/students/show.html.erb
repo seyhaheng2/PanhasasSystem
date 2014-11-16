@@ -1,0 +1,85 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-area">
+      <div class="wizard-form-h">
+        <div id="wizard" class="swMain">
+
+
+          <%= link_to students_path, :class => 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-list-alt"></span>
+          Back
+          <% end %>
+          <%= link_to edit_student_path(@student), :class => 'btn btn-primary' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+          <% end %>
+            <div class="heading">
+        <strong>show</strong> student
+          student
+
+        <dl class="dl-horizontal">
+          <dt>Name khmer:</dt>
+          <dd><%= @student.name_khmer %></dd>
+
+          <dt>Name english:</dt>
+          <dd><%= @student.name_english %></dd>
+
+          <dt>Gender:</dt>
+          <dd><%= @student.gender %></dd>
+
+          <dt>Marital status:</dt>
+          <dd><%= @student.marital_status %></dd>
+
+          <dt>Dob:</dt>
+          <dd><%= @student.dob %></dd>
+
+          <dt>Pob:</dt>
+          <dd><%= @student.pob %></dd>
+
+          <dt>Nationality:</dt>
+          <dd><%= @student.nationality %></dd>
+
+          <dt>Home address:</dt>
+          <dd><%= @student.home_address %></dd>
+
+          <dt>Telephone:</dt>
+          <dd><%= @student.telephone %></dd>
+
+          <dt>Email:</dt>
+          <dd><%= @student.email %></dd>
+
+          <dt>Work place:</dt>
+          <dd><%= @student.work_place %></dd>
+
+          <dt>Position:</dt>
+          <dd><%= @student.position %></dd>
+
+          <dt>Parent name:</dt>
+          <dd><%= @student.parent_name %></dd>
+
+          <dt>Spouse name:</dt>
+          <dd><%= @student.spouse_name %></dd>
+
+          <dt>Emergency contact:</dt>
+          <dd><%= @student.emergency_contact %></dd>
+
+          <dt>Emergency relationship:</dt>
+          <dd><%= @student.emergency_relationship %></dd>
+
+          <dt>Emergency address:</dt>
+          <dd><%= @student.emergency_address %></dd>
+
+          <dt>Emergency telephone:</dt>
+          <dd><%= @student.emergency_telephone %></dd>
+
+          <dt>Education background:</dt>
+          <dd><%= @student.education_background %></dd>
+
+        </dl>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

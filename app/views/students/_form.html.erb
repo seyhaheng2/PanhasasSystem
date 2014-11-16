@@ -1,0 +1,140 @@
+<%= form_for(@student, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @student.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h4>
+
+      <ul>
+      <% @student.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :name_khmer, :class => "c-label" %>
+      <%= f.text_field :name_khmer%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :name_english, :class => "c-label" %>
+      <%= f.text_field :name_english%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="tdl-content">
+      <ul>
+        <li style="display:flex;">
+          <% Gender.all.each do |g| %>
+          <div class="radio" style="margin-left:20px;margin-top:15px;">
+            <%= f.radio_button :gender_id, g.id, :checked => "#{g.name}" == "Male"  %>
+            <%= f.label "#{g.name}" %>
+          </div>
+          <%end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :marital_status, :class => "c-" %>
+      <%= f.select :marital_status_id, MaritalStatus.all.map {|m|[m.name, m.id]},{include_blank: false}%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :dob, :class => "c-label" %>
+      <%= f.text_field :dob%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :pob, :class => "c-label" %>
+      <%= f.text_field :pob%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :nationality, :class => "c-label" %>
+      <%= f.text_field :nationality%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :telephone, :class => "c-label" %>
+      <%= f.text_field :telephone%>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="inline-form">
+      <%= f.label :home_address, :class => "c-label" %>
+      <%= f.text_area :home_address%>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :email, :class => "c-label" %>
+      <%= f.text_field :email%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :work_place, :class => "c-label" %>
+      <%= f.text_field :work_place%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :position, :class => "c-label" %>
+      <%= f.text_field :position%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :parent_name, :class => "c-label" %>
+      <%= f.text_field :parent_name%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :spouse_name, :class => "c-label" %>
+      <%= f.text_field :spouse_name%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :emergency_contact, :class => "c-label" %>
+      <%= f.text_field :emergency_contact%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :emergency_relationship, :class => "c-label" %>
+      <%= f.text_field :emergency_relationship%>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="inline-form">
+      <%= f.label :emergency_telephone, :class => "c-label" %>
+      <%= f.text_field :emergency_telephone%>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="inline-form">
+      <%= f.label :emergency_address, :class => "c-label" %>
+      <%= f.text_area :emergency_address%>
+    </div>
+  </div>
+<div class="col-md-12">
+    <br>
+      <%= f.submit :class => "btn btn-primary" %>
+      <%= link_to students_path, :class => 'btn btn-default' do %>
+    <span class="fa fa-list-alt"></span>
+    Back
+  <% end %>
+</div>
+<% end %>

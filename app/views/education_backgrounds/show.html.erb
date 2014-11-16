@@ -1,0 +1,52 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-area">
+      <div class="wizard-form-h">
+        <div id="wizard" class="swMain">
+
+
+          <%= link_to education_backgrounds_path, :class => 'btn btn-default' do %>
+          <span class="glyphicon glyphicon-list-alt"></span>
+          Back
+          <% end %>
+          <%= link_to edit_education_background_path(@education_background), :class => 'btn btn-primary' do %>
+          <span class="glyphicon glyphicon-pencil"></span>
+          Edit
+          <% end %>
+            <div class="heading">
+        <strong>show</strong> education_background
+          education_background
+
+        <dl class="dl-horizontal">
+          <dt>High school:</dt>
+          <dd><%= @education_background.high_school %></dd>
+
+          <dt>English program:</dt>
+          <dd><%= @education_background.english_program %></dd>
+
+          <dt>Degree program:</dt>
+          <dd><%= @education_background.degree_program %></dd>
+
+          <dt>University:</dt>
+          <dd><%= @education_background.university %></dd>
+
+          <dt>Graduate school:</dt>
+          <dd><%= @education_background.graduate_school %></dd>
+
+          <dt>Type of degree:</dt>
+          <dd><%= @education_background.type_of_degree %></dd>
+
+          <dt>Desired major:</dt>
+          <dd><%= @education_background.desired_major %></dd>
+
+          <dt>Student:</dt>
+          <dd><%= @education_background.student %></dd>
+
+        </dl>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
